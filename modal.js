@@ -24,7 +24,7 @@ const projects = {
     output: 'HTML5, CSS3, Photoshop',
     overview: "프리미엄 수면 전문 브랜드 '시몬스(SIMMONS)'의 웹사이트 리뉴얼 프로젝트입니다. 갤러리를 둘러보는 듯한 감각적인 와이드 레이아웃과 여백(White Space)을 활용하여 안락함과 프리미엄 무드를 극대화했으며, 웹 표준에 맞춘 시맨틱 마크업으로 반응형 웹을 구현했습니다.",
     pdfLink: 'Simmons_Renewal.pdf',
-    webLink: 'https://madeby-soojin.github.io/simmons/index.html'
+    webLink: 'https://madeby-soojin.github.io/simmons/simmons.html'
   }
 };
 
