@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soojin Choi | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+  <main id="home">
+    <header>
+      <div class="head">
+        <div class="logo"><a href="#home">PORTFOLIO</a></div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Projects</a></li>
+            <li><a href="#contact-wrap">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="hero-profile">
+      <div class="profile-text">
+        <h1>
+          <span>안녕하세요.</span><br>
+          고객의 마음을 읽고 타겟을 설득하는<br>
+          디자이너 <strong>최수진</strong>입니다.
+        </h1>
+        <p>
+          오랜 CS 현장 경험으로 다져진 문제 해결 능력과 유연한 커뮤니케이션 스킬을 갖추고 있습니다.<br>
+          사용자가 소화하기 쉬운 형태로 데이터를 변환하고,<br>
+          온·오프라인 매체에 최적화된 시각 커뮤니케이션을 실현하는<br>
+          든든한 파트너가 되겠습니다.
+        </p>
+        <div class="skills">
+          <span class="skill-badge">Editorial Design</span>
+          <span class="skill-badge">Web Design</span>
+          <span class="skill-badge">UI/UX</span>
+        </div>
+      </div>
+      <div class="profile-image-wrap">
+        <div class="profile-frame">
+          <img src="img/main.jpg" alt="최수진 디자이너" class="profile-img">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-left">
+        <h2 class="about-title">About Me</h2>
+        <h3>사용자 경험을 개선하는<br>'기능적인 디자인'을 구현합니다.</h3>
+        <p>
+          지난 10년간 CS 강사, 고객만족팀 선임 등 고객 접점의 최전선에서 실무 역량을 쌓았습니다.
+          특히 교육 매뉴얼을 시각 자료 중심으로 구조화하며, 직관적인 디자인이 업무 효율을 비약적으로 높인다는 것을 체감했습니다.
+        </p>
+        <p>
+          단순히 화려한 그림을 그리는 것이 아니라, 10년의 현장 경험을 통해 다져진 공감 능력을 바탕으로 사용자의 니즈를 분석하고 정보의 우선순위를 설정합니다.
+          비즈니스 목적과 사용자의 편의를 모두 고려한 '이유 있는 디자인'을 만드는 것이 저만의 경쟁력입니다.
+        </p>
+      </div>
+      <div class="about-right">
+        <div class="history-block">
+          <h4>Experience & Education</h4>
+          <ul>
+            <li><strong>영진직업전문학교</strong>디지털 편집 디자인 과정 수료</li>
+            <li><strong>(주)트랜스코스모스코리아</strong>CS 강사 (교육 매뉴얼 시각화 및 프로세스 개선)</li>
+            <li><strong>(주)골드문</strong>고객만족팀 선임 (심화 민원 해결 및 고객 니즈 분석)</li>
+          </ul>
+        </div>
+        <div class="skill-block">
+          <h4>Skills</h4>
+          <div class="skill-tags">
+            <span>Photoshop</span>
+            <span>Illustrator</span>
+            <span>InDesign</span>
+            <span>Figma</span>
+            <span>HTML/CSS</span>
+            <span>MS Office</span>
+            <span>한글(HWP)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="works">
+    <h2 class="title">Projects</h2>
+    <div class="gallery">
+      <div class="box" onclick="openModal('project1')">
+        <div class="thumb-wrap">
+          <img src="img/box1.jpg" alt="Poster Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Poster Design</p>
+      </div>
+      <div class="box" onclick="openModal('project2')">
+        <div class="thumb-wrap">
+          <img src="img/box2.jpg" alt="Logo Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Logo Design</p>
+      </div>
+      <div class="box" onclick="openModal('project3')">
+        <div class="thumb-wrap">
+          <img src="img/box3.jpg" alt="SNS Banner Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>SNS Banner Design</p>
+      </div>
+      <div class="box" onclick="openModal('project4')">
+        <div class="thumb-wrap">
+          <img src="img/box4.jpg" alt="Leaflet Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Leaflet Design</p>
+      </div>
+      <div class="box" onclick="openModal('project5')">
+        <div class="thumb-wrap">
+          <img src="img/box5.jpg" alt="Editorial Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Editorial Design</p>
+      </div>
+      <div class="box" onclick="openModal('project6')">
+        <div class="thumb-wrap">
+          <img src="img/box6.jpg" alt="Package Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Package Design</p>
+      </div>
+      <div class="box" onclick="openModal('project7')">
+        <div class="thumb-wrap">
+          <img src="img/box7.jpg" alt="Detail Page Design" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Detail Page Design</p>
+      </div>
+      <div class="box" onclick="openModal('project8')">
+        <div class="thumb-wrap">
+          <img src="img/box8.jpg" alt="Cafe24 Shopping Mall" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Cafe24 Shopping Mall</p>
+      </div>
+      <div class="box" onclick="openModal('project9')">
+        <div class="thumb-wrap">
+          <img src="img/box9.jpg" alt="Website Renewal" class="thumbnail">
+          <div class="hover-text">VIEW</div>
+        </div>
+        <p>Website Renewal</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-wrap">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2 class="contact-title">WORK WITH ME</h2>
+        <h3>브랜드의 다음 스텝,<br>지금 바로 시작해 보세요.</h3>
+        <p>단순히 보기 좋은 것을 넘어, 사용자 경험을 개선하고 비즈니스 가치를 높이는 든든한 파트너가 되어드리겠습니다.</p>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:o537845165@gmail.com" class="contact-box">
+          <span class="label">Email</span>
+          <span class="info">o537845165@gmail.com</span>
+        </a>
+        <a href="tel:010-8220-6222" class="contact-box">
+          <span class="label">Phone</span>
+          <span class="info">010-8220-6222</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>© 2026 Choi Soojin | Portfolio</p>
+    <p class="attr">Favicon icon by <a href="https://www.flaticon.com/kr/search?word=%EB%B3%84">Pixel perfect -
+        Flaticon</a></p>
+  </footer>
+
+  <div id="modal" class="modal" onclick="closeModalOnOutside(event)">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <button id="backToTop" title="Go to top">↑</button>
+  <script src="modal.js"></script>
+</body>
+
+</html>
