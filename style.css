@@ -665,25 +665,97 @@ main {
 
 
 @media (max-width: 768px) {
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .box {
+    width: 100% !important;
+    transform: none !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .thumb-title {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #fff;
+    opacity: 1 !important;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .box p:not(.thumb-title) {
+    display: none !important;
+  }
+
+  .modal-content {
+    width: 94% !important;
+    max-width: 94% !important;
+    margin: 20px auto !important;
+    padding: 15px !important;
+  }
+
+  #modal-body img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+
+  .close {
+    top: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
   }
 
   .head {
     flex-direction: column;
     gap: 15px;
+    padding: 1rem;
   }
 
   main {
     height: auto;
     min-height: 100vh;
-    padding-top: 170px;
+    padding-top: 150px;
     padding-bottom: 50px;
   }
 
   .hero-profile {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 30px;
   }
 
   .profile-text {
@@ -691,25 +763,25 @@ main {
   }
 
   .profile-text h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .skills {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .profile-frame {
-    width: 250px;
-    height: 330px;
-  }
-
-  .box {
-    width: 100%;
+    width: 220px;
+    height: 290px;
+    margin: 0 auto;
   }
 
   .contact-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 40px;
   }
 
@@ -720,7 +792,11 @@ main {
 
   .web-modal-container {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 20px 15px;
+  }
+
+  .web-info {
+    width: 100% !important;
   }
 }
 
@@ -734,7 +810,9 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
+
 
 @keyframes slideIn {
   from {
