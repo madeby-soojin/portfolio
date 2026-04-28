@@ -9,42 +9,46 @@ const projects = {
   project8: {
     type: 'web',
     image: 'img/box8.jpg',
-    title: 'E-Commerce | MONO STEP 클래식 슈즈 쇼핑몰',
+    title: 'Cafe24 Shopping Mall Edit',
     period: '2026. 03. 24',
     output: 'Photoshop, Cafe24(HTML/CSS)',
-    overview: "수많은 색으로 뒤덮인 트렌드 속에서 변하지 않는 무채색의 가치를 제안하는 클래식 슈즈 전문 편집숍 'MONO STEP' 쇼핑몰 구축 프로젝트입니다. 모던 시크 감성의 흑백 톤앤매너와 사용자의 구매 동선을 고려한 상세 페이지 설계를 통해 브랜드 신뢰도를 높였습니다.",
-    pdfLink: '최수진_쇼핑몰편집.pdf',
+    overview: "수많은 색으로 뒤덮인 트렌드 속에서 변하지 않는 무채색의 가치를 제안하는 클래식 슈즈 편집숍 'MONO STEP'입니다. 모던 시크와 미니멀 감성을 담은 흑백(Monochrome) 톤앤매너를 바탕으로, '절제미(Less is More)'가 돋보이도록 쇼핑몰을 리디자인했습니다.",
+    pdfLink: 'ShoppingMall_Design.pdf',
     webLink: 'https://o537845165.cafe24.com'
   },
   project9: {
     type: 'web',
     image: 'img/box9.jpg',
-    title: 'Web Renewal | SIMMONS 프리미엄 수면 브랜드 웹 리뉴얼',
-    period: '2026. 04. 18',
-    output: 'Photoshop, Visual Studio Code',
-    overview: "시몬스만의 세련된 아이덴티티를 디지털 환경에 맞춰 직관적으로 재해석한 웹사이트 리뉴얼 프로젝트입니다. 퍼블리싱 효율을 고려한 시맨틱 마크업 설계와 여백을 활용한 와이드 레이아웃을 통해 브랜드 특유의 프리미엄 무드를 극대화했습니다.",
-    pdfLink: '최수진_디지털 출판.pdf',
-    webLink: 'https://o537845165.github.io/simmons/'
+    title: 'Web page Publishing',
+    period: '2026. 04. 07',
+    output: 'HTML5, CSS3, Photoshop',
+    overview: "프리미엄 수면 전문 브랜드 '시몬스(SIMMONS)'의 웹사이트 리뉴얼 프로젝트입니다. 갤러리를 둘러보는 듯한 감각적인 와이드 레이아웃과 여백(White Space)을 활용하여 안락함과 프리미엄 무드를 극대화했으며, 웹 표준에 맞춘 시맨틱 마크업으로 반응형 웹을 구현했습니다.",
+    pdfLink: 'Simmons_Renewal.pdf',
+    webLink: 'https://madeby-soojin.github.io/simmons/simmons.html'
   }
 };
 
 function openModal(projectId) {
-  const project = projects[projectId];
   const modal = document.getElementById('modal');
-  const modalContent = document.getElementById('modal-content');
-
-  if (!modal || !modalContent) return;
+  const modalBody = document.getElementById('modal-body');
+  const project = projects[projectId];
+  if (!project) return;
 
   if (project.type === 'image') {
-    modalContent.innerHTML = `<img src="${project.image}" style="width:100%; display:block;">`;
-  } else {
-    modalContent.innerHTML = `
+    modalBody.innerHTML = `
+      <img src="${project.image}" alt="${project.title || '포트폴리오 이미지'}">
+      <div class="modal-btn-wrap">
+        <button class="modal-close-btn" onclick="closeModal()">Close Window</button>
+      </div>
+    `;
+  } else if (project.type === 'web') {
+    modalBody.innerHTML = `
       <div class="web-modal-container">
-        <div class="web-modal-left">
+        <div class="web-modal-img">
           <img src="${project.image}" alt="${project.title}">
         </div>
-        <div class="web-modal-right">
-          <h2 class="web-title">${project.title}</h2>
+        <div class="web-modal-info">
+          <h3>${project.title}</h3>
           <p class="web-meta"><b>Period :</b> ${project.period}</p>
           <p class="web-meta"><b>Output :</b> ${project.output}</p>
           <div class="web-overview">
@@ -57,52 +61,72 @@ function openModal(projectId) {
           </div>
         </div>
       </div>
-      <div class="modal-btn-wrap">
-        <button id="modalClose" class="modal-close-btn" onclick="closeModal()">Close Window</button>
+      <div class="modal-btn-wrap" style="padding-top: 0;">
+        <button class="modal-close-btn" onclick="closeModal()">Close Window</button>
       </div>
     `;
   }
 
+  setTimeout(() => {
+    document.getElementById('modalClose')?.focus();
+  }, 0);
+
   modal.classList.add('active');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
-
-  setTimeout(() => {
-    document.getElementById('modalClose')?.focus();
-  }, 100);
 }
 
 function closeModal() {
   const modal = document.getElementById('modal');
-  if (!modal) return;
   modal.classList.remove('active');
   modal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 }
 
-window.onclick = function (event) {
-  const modal = document.getElementById('modal');
-  if (event.target === modal) {
+function closeModalOnOutside(event) {
+  if (event.target === event.currentTarget) {
     closeModal();
   }
-};
+}
 
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
+  const modal = document.getElementById('modal');
+  if (event.key === 'Escape' && modal.classList.contains('active')) {
     closeModal();
   }
 });
 
 const backToTopBtn = document.getElementById("backToTop");
-window.onscroll = function () {
-  if (!backToTopBtn) return;
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
 
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+if (backToTopBtn) {
+  window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+}
+
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
+});
+const modal = document.getElementById('modal');
+
+if (modal) {
+  modal.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab' && modal.classList.contains('active')) {
+      e.preventDefault();
+      document.getElementById('modalClose').focus();
+    }
+  });
 }
