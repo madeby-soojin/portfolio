@@ -1,226 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Soojin Choi | Portfolio</title>
   <meta name="description" content="사용자 경험을 구조로 설계하는 UX 디자이너 최수진의 포트폴리오입니다.">
   <meta name="author" content="최수진">
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="Soojin Choi | Portfolio">
   <meta property="og:description" content="10년 고객 경험을 바탕으로 근거 있는 디자인을 합니다.">
   <meta property="og:image" content="img/main.jpg">
-  <meta property="og:url" content="수진님의 웹사이트 주소">
-
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
-  <main id="home">
-    <header>
-      <div class="head">
-        <div class="logo"><a href="#home">PORTFOLIO</a></div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#works">Projects</a></li>
-            <li><a href="#contact-wrap">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="hero-profile">
-      <div class="profile-text">
-        <h1>
-          <span>안녕하세요.</span> 10년 고객 경험을 바탕으로<br>
-          <strong class="highlight">근거 있는 디자인</strong>을 합니다.
-        </h1>
-        <p>
-          10년간 CS 현장에서 고객의 목소리를 분석하며
-          문제의 본질을 파악해왔습니다.<br>
-
-          이 경험을 바탕으로 사용자의 행동을 바꾸는
-          디자인을 합니다.
-        </p>
-        <div class="skills">
-          <span class="skill-badge">#UX디자인</span>
-          <span class="skill-badge">#사용자경험</span>
-          <span class="skill-badge">#문제해결</span>
-          <span class="skill-badge">#정보구조설계</span>
-          <span class="skill-badge">#CS기반디자인</span>
-        </div>
-      </div>
-      <div class="profile-image-wrap">
-        <div class="profile-frame">
-          <img src="img/main.jpg" alt="최수진 디자이너" class="profile-img">
-        </div>
-      </div>
+  <header>
+    <div class="head">
+      <div class="logo"><a href="#home">PORTFOLIO</a></div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Projects</a></li>
+          <li><a href="#contact-wrap">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </main>
+  </header>
 
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-left">
-        <h2 class="about-title">ABOUT ME</h2>
-        <h3>사용자 경험을 구조로 설계하는<br>UX 디자이너입니다.</h3>
-        <p>
-          10년간 CS 현장에서 고객의 목소리를 분석하며 문제의 본질을 파악해왔습니다.<br>
-          CS 강사로 재직하며 텍스트 중심의 교육 매뉴얼을 시각적으로 재구성하여 교육 효율을 개선한 경험이 있습니다.
-        </p>
-        <p>
-          이 경험을 바탕으로 사용자 관점에서 문제를 정의하고, 정보의 우선순위를 설계한 뒤 시각적으로 전달하는 구조 중심의 디자인을 합니다. 단순한 시각 표현이 아닌, 사용자 행동을 유도하는 '근거 있는
-          디자인'으로 문제를 해결합니다.
-        </p>
+  <main id="home">
+    <section class="hero-profile">
+      <div class="profile-text">
+        <p>안녕하세요,</p>
+        <h1>10년 고객 경험을 바탕으로<br>근거 있는 디자인을 합니다.</h1>
+        <p>비즈니스 목적에 부합하는 디지털 솔루션을 제시하고 데이터와 사용자 중심의 해결책을 고민하는 UX 디자이너 최수진입니다.</p>
+        <div class="skills">
+          <span class="skill-tag">UX/UI Design</span>
+          <span class="skill-tag">Web Design</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">Illustrator</span>
+        </div>
+      </div>
+      <div class="profile-frame">
+        <img src="img/main.jpg" alt="최수진 프로필 사진">
+      </div>
+    </section>
 
-        <div class="skill-block-left">
-          <h4>Skills</h4>
-          <div class="skill-tags">
-            <span>Photoshop</span>
-            <span>Illustrator</span>
-            <span>InDesign</span>
-            <span>Figma</span>
-            <span>HTML/CSS</span>
+    <section id="about" style="padding: 120px 0;">
+      <div class="about-inner" style="display: flex; gap: 80px;">
+        <div class="about-left" style="flex: 1;">
+          <h2 style="font-size: 0.9rem; font-weight: 700; color: #888; letter-spacing: 0.2em; margin-bottom: 20px;">
+            ABOUT ME</h2>
+          <h3 style="font-size: 2.2rem; font-weight: 800; line-height: 1.4; margin-bottom: 30px;">사용자 경험을 구조로 설계하는<br>UX
+            디자이너입니다.</h3>
+          <p style="color: #666; margin-bottom: 20px;">10년 동안 고객 최접점에서 쌓아온 경험은 사용자의 숨은 니즈를 파악하는 가장 강력한 무기가 되었습니다. 단순한
+            심미성을 넘어 논리적인 구조와 명확한 근거가 있는 디자인을 지향합니다.</p>
+          <p style="color: #666;">디자인 시스템 구축부터 인터랙티브한 웹 퍼블리싱까지, 비즈니스의 성장과 사용자의 만족을 잇는 가교 역할을 수행합니다.</p>
+        </div>
+        <div class="about-right"
+          style="flex: 1; background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+          <div class="exp-item" style="margin-bottom: 30px;">
+            <h4 style="font-weight: 700; margin-bottom: 10px; color: #222;">Experience</h4>
+            <p style="font-size: 0.95rem; color: #666; margin-bottom: 5px;">• 그래픽 디자인 및 퍼블리싱 프리랜서</p>
+            <p style="font-size: 0.95rem; color: #666;">• 고객 경험 관리(CX) 전문가 10년</p>
+          </div>
+          <div class="edu-item">
+            <h4 style="font-weight: 700; margin-bottom: 10px; color: #222;">Education</h4>
+            <p style="font-size: 0.95rem; color: #666;">• 디지털 디자인(UI/UX) 실무자 양성 과정 수료</p>
           </div>
         </div>
       </div>
-      <div class="about-right">
-        <div class="history-block">
-          <h4>Experience</h4>
-          <ul>
-            <li>
-              <strong>(주)트랜스코스모스코리아</strong>
-              CS 강사 | 교육 매뉴얼 시각화 → 교육 이해도 향상 및 반복 문의 감소
-            </li>
-            <li>
-              <strong>(주)골드문</strong>
-              고객만족팀 선임 | 심화 민원 분석 및 해결 → 고객 이탈 방지 및 만족도 향상
-            </li>
-            <li>
-              <strong>(주)티시스아이티콜센타</strong>
-              기술 상담 | 장애 원인 분석 및 해결 → 자체 해결률 향상 및 고객 만족도 개선
-            </li>
-          </ul>
+    </section>
 
-          <h4>Education</h4>
-          <ul>
-            <li>
-              <strong>영진직업전문학교</strong>
-              디지털 편집 디자인 과정 수료 | 온·오프라인 디자인 및 퍼블리싱 역량 확보
-            </li>
-          </ul>
+    <section id="works">
+      <h2 class="works-title">PROJECTS</h2>
+      <div class="works-grid">
+        <div class="box" onclick="openModal('project1')">
+          <div class="img-wrap">
+            <img src="img/box1.jpg" alt="Poster Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Poster Design</p>
+        </div>
+        <div class="box" onclick="openModal('project2')">
+          <div class="img-wrap">
+            <img src="img/box2.jpg" alt="Logo Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Logo Design</p>
+        </div>
+        <div class="box" onclick="openModal('project3')">
+          <div class="img-wrap">
+            <img src="img/box3.jpg" alt="SNS Banner Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>SNS Banner Design</p>
+        </div>
+        <div class="box" onclick="openModal('project4')">
+          <div class="img-wrap">
+            <img src="img/box4.jpg" alt="Leaflet Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Leaflet Design</p>
+        </div>
+        <div class="box" onclick="openModal('project5')">
+          <div class="img-wrap">
+            <img src="img/box5.jpg" alt="Editorial Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Editorial Design</p>
+        </div>
+        <div class="box" onclick="openModal('project6')">
+          <div class="img-wrap">
+            <img src="img/box6.jpg" alt="Package Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Package Design</p>
+        </div>
+        <div class="box" onclick="openModal('project7')">
+          <div class="img-wrap">
+            <img src="img/box7.jpg" alt="Food App UI Design" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Food App UI Design</p>
+        </div>
+        <div class="box" onclick="openModal('project8')">
+          <div class="img-wrap">
+            <img src="img/box8.jpg" alt="MONO STEP 쇼핑몰 구축" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Shopping Mall Edit</p>
+        </div>
+        <div class="box" onclick="openModal('project9')">
+          <div class="img-wrap">
+            <img src="img/box9.jpg" alt="시몬스 웹 리뉴얼" class="thumbnail">
+            <div class="hover-text">→ Case Study ↗</div>
+          </div>
+          <p>Website Renewal</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="works">
-    <h2 class="title">Projects</h2>
-    <div class="gallery">
-      <div class="box" onclick="openModal('project1')">
-        <div class="thumb-wrap">
-          <img src="img/box1.jpg" alt="Poster Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
+    <section id="contact-wrap">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <h2 class="contact-title">WORK WITH ME</h2>
+          <h3>보기 좋은 디자인을 넘어,<br>근거 있는 해답을 제안합니다.</h3>
+          <p>단순한 시각적 만족을 넘어, 사용자의 불편함을 해결하고 비즈니스의 가치를 높이는 든든한 파트너가 되겠습니다.</p>
         </div>
-        <p>Poster Design</p>
-      </div>
-      <div class="box" onclick="openModal('project2')">
-        <div class="thumb-wrap">
-          <img src="img/box2.jpg" alt="Logo Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
+        <div class="contact-right">
+          <a href="mailto:o537845165@gmail.com" class="contact-box">
+            <span class="label">Email</span>
+            <span class="info">o537845165@gmail.com</span>
+          </a>
+          <a href="tel:010-8220-6222" class="contact-box">
+            <span class="label">Phone</span>
+            <span class="info">010-8220-6222</span>
+          </a>
         </div>
-        <p>Logo Design</p>
       </div>
-      <div class="box" onclick="openModal('project3')">
-        <div class="thumb-wrap">
-          <img src="img/box3.jpg" alt="SNS Banner Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>SNS Banner Design</p>
-      </div>
-      <div class="box" onclick="openModal('project4')">
-        <div class="thumb-wrap">
-          <img src="img/box4.jpg" alt="Leaflet Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Leaflet Design</p>
-      </div>
-      <div class="box" onclick="openModal('project5')">
-        <div class="thumb-wrap">
-          <img src="img/box5.jpg" alt="Editorial Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Editorial Design</p>
-      </div>
-      <div class="box" onclick="openModal('project6')">
-        <div class="thumb-wrap">
-          <img src="img/box6.jpg" alt="Package Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Package Design</p>
-      </div>
-      <div class="box" onclick="openModal('project7')">
-        <div class="thumb-wrap">
-          <img src="img/box7.jpg" alt="Detail Page Design" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Detail Page Design</p>
-      </div>
-      <div class="box" onclick="openModal('project8')">
-        <div class="thumb-wrap">
-          <img src="img/box8.jpg" alt="Cafe24 Shopping Mall" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Cafe24 Shopping Mall</p>
-      </div>
-      <div class="box" onclick="openModal('project9')">
-        <div class="thumb-wrap">
-          <img src="img/box9.jpg" alt="Website Renewal" class="thumbnail">
-          <div class="hover-text">VIEW</div>
-        </div>
-        <p>Website Renewal</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-wrap">
-    <div class="contact-inner">
-      <div class="contact-left">
-        <h2 class="contact-title">WORK WITH ME</h2>
-        <h3>보기 좋은 디자인을 넘어,<br>근거 있는 해답을 제안합니다.</h3>
-        <p>단순한 시각적 만족을 넘어, 사용자의 불편함을 해결하고 비즈니스의 가치를 높이는 든든한 파트너가 되겠습니다.</p>
-      </div>
-      <div class="contact-right">
-        <a href="mailto:o537845165@gmail.com" class="contact-box">
-          <span class="label">Email</span>
-          <span class="info">o537845165@gmail.com</span>
-        </a>
-        <a href="tel:010-8220-6222" class="contact-box">
-          <span class="label">Phone</span>
-          <span class="info">010-8220-6222</span>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer id="footer">
     <p>© 2026 Choi Soojin | Portfolio</p>
-    <p class="attr">Favicon icon by <a href="https://www.flaticon.com/kr/search?word=%EB%B3%84">Pixel perfect -
-        Flaticon</a></p>
   </footer>
 
-  <div id="modal" class="modal" onclick="closeModalOnOutside(event)">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div id="modal-body"></div>
+  <button onclick="scrollToTop()" id="backToTop" title="Go to top">Top</button>
+
+  <div id="modal" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeModalOnOutside(event)">
+    <div class="modal-content-area">
+      <div id="modal-content"></div>
     </div>
   </div>
 
-  <button id="backToTop" title="Go to top">↑</button>
   <script src="modal.js"></script>
 </body>
 
